@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import QRCode from "react-qr-code";
+import moment from 'moment'
 
 import placeApi from '../api/placeApi';
 import PageHeader from '../components/PageHeader';
@@ -17,6 +18,8 @@ const PlaceDetail = () => {
     useEffect(() => {
         const getPlace = async () => {
             const res = await placeApi.getOne(id);
+            console.log("res", res);
+            
             setPlace(res);
         }
         getPlace();
@@ -24,18 +27,21 @@ const PlaceDetail = () => {
 
     const columns = [
         {
-            field: 'name', headerName: 'Name',
-            width: 170
+            field: 'fullname', headerName: 'Name',
+            width: 170,
+            renderCell: (params) => params.row.user.fullname
         },
         {
             field: 'phone',
             headerName: 'Phone',
-            width: 150
+            width: 150,
+            renderCell: (params) => params.row.user.phoneNumber
         },
         {
             field: 'address',
             headerName: 'Address',
-            width: 150
+            width: 150,
+            renderCell: (params) => params.row.user.address
         },
         {
             field: 'createdAt',

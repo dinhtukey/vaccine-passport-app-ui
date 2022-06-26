@@ -6,3 +6,11 @@ yarn add react-chartjs-2 chart.js react-qr-code react-qr-reader
 yarn add axios moment query-string react-router-dom
 yarn add @reduxjs/toolkit
 yarn add react-redux
+
+
+---------------------env localhost
+MONGODB_URL=mongodb://localhost:27017/vaccine-passport
+DEFAULT_ADMIN_USERNAME=admin
+DEFAULT_ADMIN_PASSWORD=123456
+PASSWORD_SECRET_KEY=itsasecret123
+TOKEN_SECRET_KEY=tokensecretkey123

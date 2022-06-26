@@ -144,11 +144,11 @@ const VaccineCreateDialog = ({ dialogOpen, onSuccess, onCancel }) => {
             }
             action={
                 <Box
-                    width={{sm:'400px', xs: '100%'}}
-                    sx={{
-                        display: 'flex',
-                        justifyContent: 'flex-end'
-                    }}
+                width={{sm:'400px', xs: '100%'}}
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'flex-end'
+                }}
                 >
                     <Button
                         onClick={() => onCancel()}

@@ -93,7 +93,7 @@ const VaccineDetail = () => {
                 }
             />
             <Grid container spacing={4}>
-                <Grid item xs={4}>
+                <Grid item sm={4} xs={12}>
                     {
                         vaccine &&
                         <Card
@@ -124,7 +124,7 @@ const VaccineDetail = () => {
                         </Card>
                     }
                 </Grid>
-                <Grid item xs={8}>
+                <Grid item sm={8} xs={12}>
                     {
                         vaccine && <VaccineLot
                             vaccine={vaccine}

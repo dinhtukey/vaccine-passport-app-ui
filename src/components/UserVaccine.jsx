@@ -75,7 +75,7 @@ const UserVaccine = ({ user }) => {
         if (loading) return;
         const err = [!selectedVaccine, !selectedLot];
 
-        if(!err.every(e => !e)) return;
+        if (!err.every(e => !e)) return;
         setLoading(true);
 
         const params = {
@@ -87,10 +87,10 @@ const UserVaccine = ({ user }) => {
         try {
             const res = await userApi.vaccinated(params);
             handleResetForm();
-            setUserVaccines([res,...userVaccines]);
+            setUserVaccines([res, ...userVaccines]);
         } catch (error) {
             console.log(error);
-            
+
         } finally {
             setLoading(false);
         }
@@ -135,7 +135,7 @@ const UserVaccine = ({ user }) => {
                 type={dialogType}
                 content={
                     <Box
-                        sx={{width: {xs: '100%', sm: '400px'}}}
+                        sx={{ width: { xs: '100%', sm: '400px' } }}
                     >
                         <FormControl fullWidth margin='normal'>
                             <Autocomplete

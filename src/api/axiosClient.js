@@ -1,7 +1,7 @@
 import axios from 'axios';
 import queryString from 'query-string';
 
-const baseURL = "http://localhost:3000/api/";
+const baseURL = "https://vaccine-passport-tdtu-api.herokuapp.com/api/";
 const getToken = () => localStorage.getItem("token");
 const axiosClient = axios.create({
     baseURL: baseURL,
