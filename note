@@ -1,0 +1,8 @@
+----------------install esential package
+yarn add @mui/material @emotion/react @emotion/styled
+yarn add @fontsource/roboto
+yarn add @mui/icons-material
+yarn add react-chartjs-2 chart.js react-qr-code react-qr-reader
+yarn add axios moment query-string react-router-dom
+yarn add @reduxjs/toolkit
+yarn add react-redux
